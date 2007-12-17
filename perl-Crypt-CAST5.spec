@@ -9,7 +9,6 @@ Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/B/BO/BOBMATH/%{real_name}-%{version}.tar.bz2
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides an implementation of the CAST5 block cipher using
