@@ -1,15 +1,18 @@
-%define real_name Crypt-CAST5
+%define upstream_name    Crypt-CAST5
+%define upstream_version 0.05
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Crypt::CAST5 - CAST5 block cipher
-Name:		perl-%{real_name}
-Version:	0.05
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BO/BOBMATH/%{real_name}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/B/BO/BOBMATH/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides an implementation of the CAST5 block cipher using
@@ -18,7 +21,7 @@ is a product of the CAST design procedure developed by C. Adams and
 S. Tavares. The CAST5 cipher is available royalty-free.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -39,4 +42,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/Crypt/CAST5.pm
 %{perl_vendorlib}/*/auto/Crypt/CAST5/CAST5.so
 %{_mandir}/*/*
-
