@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	18
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://search.cpan.org/CPAN/authors/id/B/BO/BOBMATH/%{modname}-%{modver}.tar.bz2
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
